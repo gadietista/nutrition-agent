@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: nutrition-agent
+    env: python
+    pythonVersion: 3.11
+    region: oregon
+    plan: free
+
+    buildCommand: pip install -r scripts/requirements.txt
+    startCommand: "gunicorn -b 0.0.0.0:$PORT -w 2 scripts.webhook_server:app"
+
+    healthCheckPath: /health
+
+    envVars:
+      - key: LOG_LEVEL
+        value: INFO
+      - key: ENVIRONMENT
+        value: production
+      - key: AIRTABLE_TOKEN
+        sync: false
+      - key: AIRTABLE_BASE_ID
+        value: appikjk4T7IjmXKWF
+      - key: AIRTABLE_TABLE_ID
+        value: tblKQEvOYsIgb2pZv
+      - key: AIRTABLE_TABLE_NAME
+        value: Pacientes
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: NOTIFICATION_EMAIL
+        sync: false
+      - key: WEBHOOK_PORT
+        value: "8080"
