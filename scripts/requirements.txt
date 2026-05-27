@@ -1,0 +1,16 @@
+Flask==2.3.2
+gunicorn==21.2.0
+requests==2.31.0
+python-dotenv==1.0.0
+airtable-python-wrapper==0.15.2
+anthropic==0.28.0
+selenium==4.13.0
+webdriver-manager==4.0.1
+PDF2Image==1.16.3
+fitz==0.0.1.dev2
+pdf2image==1.16.3
+Pillow==10.1.0
+reportlab==4.0.7
+pandas==2.1.1
+numpy==1.24.3
+python-dateutil==2.8.2
