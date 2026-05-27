@@ -9,7 +9,7 @@ webdriver-manager==4.0.1
 PDF2Image==1.16.3
 fitz==0.0.1.dev2
 pdf2image==1.16.3
-Pillow==10.1.0
+Pillow==11.1.0
 reportlab==4.0.7
 pandas==2.1.1
 numpy==1.24.3
